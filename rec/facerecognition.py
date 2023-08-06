@@ -33,6 +33,7 @@ for file in os.listdir(unknown_dir):
             (top, right, bottom, left) = face_recognition.face_locations(img)[0]
             cv2.rectangle(img, (left, top), (right, bottom), (0, 0, 255), 2)
             cv2.putText(img, name, (left + 2, bottom + 20), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 1)
+            print(name)
 
     # Save the image with bounding boxes to a file
     output_path = os.path.join("output", file)
