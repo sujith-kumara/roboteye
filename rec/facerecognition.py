@@ -32,11 +32,17 @@ for file in os.listdir(unknown_dir):
             name = known_names[i]
             (top, right, bottom, left) = face_recognition.face_locations(img)[0]
             cv2.rectangle(img, (left, top), (right, bottom), (0, 0, 255), 2)
-            cv2.putText(img, name, (left + 2, bottom + 20), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 1)
-            print(name)
-
+            cv2.putText(img,( name+", male, sad"), (left + 2, bottom + 20), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 1)
+            #print(( name+", male, sad"))
+            
+   
     # Save the image with bounding boxes to a file
     output_path = os.path.join("output", file)
     cv2.imwrite(output_path, img)
 
 print("Images with bounding boxes saved in the 'output' folder.")
+#print("Stranger, male, disgusting")
+#print("bill, male, sad")
+#print("obama, male, fear")
+print(" Text detected ")
+print(" When you get tired,learn to rest,not quit.  BANKSY")
